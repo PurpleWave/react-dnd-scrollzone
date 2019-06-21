@@ -16,8 +16,8 @@ function createDragDropMonitorWrapper(WrappedComponent) {
   return function DragDropMonitorWrapper(props) {
     return (
       <DragDropContextConsumer>
-        {({ dragdropmanager }) =>
-          <WrappedComponent {...props} dragdropmanager={dragdropmanager} />
+        {({ dragDropManager }) =>
+          <WrappedComponent {...props} dragDropManager={dragDropManager} />
         }
       </DragDropContextConsumer>
     );
@@ -88,7 +88,7 @@ export default function createScrollingComponent(WrappedComponent) {
     static contextTypes = useNewContextApi
       ? undefined
       : {
-        dragdropmanager: PropTypes.object,
+        dragDropManager: PropTypes.object,
       };
 
     constructor(props, ctx) {
@@ -111,7 +111,7 @@ export default function createScrollingComponent(WrappedComponent) {
       // have to attach the listeners to the body
       window.document.body.addEventListener('touchmove', this.handleEvent);
 
-      this.clearMonitorSubscription = this.getdragdropmanager()
+      this.clearMonitorSubscription = this.getDragDropManager()
           .getMonitor()
           .subscribeToStateChange(() => this.handleMonitorChange());
     }
@@ -123,10 +123,10 @@ export default function createScrollingComponent(WrappedComponent) {
       this.stopScrolling();
     }
 
-    getdragdropmanager() {
+    getDragDropManager() {
       return useNewContextApi
-        ? this.props.dragdropmanager
-        : this.context.dragdropmanager;
+        ? this.props.dragDropManager
+        : this.context.dragDropManager;
     }
 
     handleEvent = (evt) => {
@@ -137,7 +137,7 @@ export default function createScrollingComponent(WrappedComponent) {
     }
 
     handleMonitorChange() {
-      const isDragging = this.getdragdropmanager().getMonitor().isDragging();
+      const isDragging = this.getDragDropManager().getMonitor().isDragging();
 
       if (!this.dragging && isDragging) {
         this.dragging = true;
