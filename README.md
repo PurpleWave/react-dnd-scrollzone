@@ -31,7 +31,7 @@ export default class App extends Component {
 }
 ```
 
-Note: You should replace the original `div` you would like to make scrollable with the `ScrollingComponent`. 
+Note: You should replace the original `div` you would like to make scrollable with the `ScrollingComponent`.
 
 ### Easing Example
 
@@ -82,7 +82,7 @@ export default App(props) {
   );
 }
 ```
-Note: You should replace the original `div` you would like to make scrollable with the `ScrollingComponent`. 
+Note: You should replace the original `div` you would like to make scrollable with the `ScrollingComponent`.
 
 ### Virtualized Example
 
@@ -152,6 +152,7 @@ Apply the withScrolling function to any html-identifier ("div", "ul" etc) or rea
  * `verticalStrength` - a function that returns the strength of the vertical scroll direction
  * `strengthMultiplier` - strength multiplier, play around with this (default 30)
  * `onScrollChange` - a function that is called when `scrollLeft` or `scrollTop` of the component are changed. Called with those two arguments in that order.
+ * `getScrollContainer` - optional parameter: a function that returns scrolling container (useful for complex custom scroll components). It receives one argument: root node of wrapped mounted component.
 
 The strength functions are both called with two arguments. An object representing the rectangle occupied by the Scrollzone, and an object representing the coordinates of mouse.
 
