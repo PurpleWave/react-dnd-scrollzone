@@ -103,7 +103,7 @@ export default function createScrollingComponent(WrappedComponent) {
     }
 
     componentDidMount() {
-      const { getScrollContainer } = this.props;
+      const { getScrollContainer, ...props } = this.props;
       const wrappedNode = findDOMNode(this.wrappedInstance);
       this.container = getScrollContainer ? getScrollContainer(wrappedNode) : wrappedNode;
       this.container.addEventListener('dragover', this.handleEvent);
@@ -244,7 +244,6 @@ export default function createScrollingComponent(WrappedComponent) {
         verticalStrength,
         horizontalStrength,
         onScrollChange,
-
         ...props,
       } = this.props;
 
