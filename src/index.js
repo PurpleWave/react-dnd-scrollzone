@@ -19,7 +19,7 @@ function createDragDropMonitorWrapper(WrappedComponent) {
         {({ dragDropManager, ...rest }) => {
           console.log(dragDropManager);
           console.log(rest);
-          return <WrappedComponent {...props} dragDropManager={dragDropManager} />
+          return <WrappedComponent {...props} dragDropManager={dragDropManager} />;
         }}
       </DragDropContextConsumer>
     );
