@@ -14,11 +14,13 @@ const useNewContextApi = createContext !== undefined && DragDropContextConsumer 
 
 function createDragDropMonitorWrapper(WrappedComponent) {
   return function DragDropMonitorWrapper(props) {
-    console.log(props);
     return (
       <DragDropContextConsumer>
-        {({ dragDropManager }) =>
-          <WrappedComponent {...props} dragDropManager={dragDropManager} />
+        {({ dragDropManager, ...rest }) => {
+            console.log(dragDropManager);
+            console.log(rest);
+            return <WrappedComponent {...props} dragDropManager={dragDropManager} />
+          }
         }
       </DragDropContextConsumer>
     );
