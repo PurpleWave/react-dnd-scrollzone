@@ -8,7 +8,7 @@ import getDisplayName from 'react-display-name';
 import hoist from 'hoist-non-react-statics';
 import { noop, intBetween, getCoords } from './util';
 
-const DEFAULT_BUFFER = 150;
+const DEFAULT_BUFFER = 300;
 
 const useNewContextApi = createContext !== undefined && DragDropContextConsumer !== undefined;
 
@@ -165,7 +165,7 @@ export default function createScrollingComponent(WrappedComponent) {
       const { left: x, top: y, width: w, height: h } = this.container.getBoundingClientRect();
       const box = { x, y, w, h };
       const coords = getCoords(evt);
-
+      console.log('coords', coords);
       // calculate strength
       this.scaleX = this.props.horizontalStrength(box, coords);
       this.scaleY = this.props.verticalStrength(box, coords);
