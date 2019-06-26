@@ -82,7 +82,7 @@ export default function createScrollingComponent(WrappedComponent) {
       onScrollChange: noop,
       verticalStrength: defaultVerticalStrength,
       horizontalStrength: defaultHorizontalStrength,
-      strengthMultiplier: 30,
+      strengthMultiplier: 50,
     };
 
     static contextTypes = useNewContextApi
@@ -165,7 +165,6 @@ export default function createScrollingComponent(WrappedComponent) {
       const { left: x, top: y, width: w, height: h } = this.container.getBoundingClientRect();
       const box = { x, y, w, h };
       const coords = getCoords(evt);
-      console.log('coords', coords);
       // calculate strength
       this.scaleX = this.props.horizontalStrength(box, coords);
       this.scaleY = this.props.verticalStrength(box, coords);
