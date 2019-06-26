@@ -16,11 +16,9 @@ function createDragDropMonitorWrapper(WrappedComponent) {
   return function DragDropMonitorWrapper(props) {
     return (
       <DragDropContextConsumer>
-        {({ dragDropManager, ...rest }) => {
-          console.log(dragDropManager);
-          console.log(rest);
-          return <WrappedComponent {...props} dragDropManager={dragDropManager} />;
-        }}
+        {({ dragDropManager }) =>
+          <WrappedComponent {...props} dragDropManager={dragDropManager} />
+        }
       </DragDropContextConsumer>
     );
   };
@@ -105,7 +103,7 @@ export default function createScrollingComponent(WrappedComponent) {
     }
 
     componentDidMount() {
-      const { getScrollContainer, ...props } = this.props;
+      const { getScrollContainer } = this.props;
       const wrappedNode = findDOMNode(this.wrappedInstance);
       this.container = getScrollContainer ? getScrollContainer(wrappedNode) : wrappedNode;
       this.container.addEventListener('dragover', this.handleEvent);
@@ -246,8 +244,10 @@ export default function createScrollingComponent(WrappedComponent) {
         verticalStrength,
         horizontalStrength,
         onScrollChange,
+
         ...props,
       } = this.props;
+
       return (
         <WrappedComponent
           ref={(ref) => { this.wrappedInstance = ref; }}
