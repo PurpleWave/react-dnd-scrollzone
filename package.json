@@ -36,7 +36,7 @@
   "author": "Alex Neises <alex@neis.es> (nexview.io)",
   "license": "MIT",
   "dependencies": {
-    "hoist-non-react-statics": "^1.2.0",
+    "hoist-non-react-statics": "3.x",
     "lodash.throttle": "^4.0.1",
     "prop-types": "^15.5.9",
     "raf": "^3.2.0",
