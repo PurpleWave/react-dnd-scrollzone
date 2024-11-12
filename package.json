@@ -10,6 +10,7 @@
     "lint": "eslint src",
     "pretest": "npm run lint",
     "test": "mocha test",
+    "prepare": "npm run build",
     "prepublish": "in-publish && npm run test && npm run build || not-in-publish",
     "publish:major": "npm version major && npm publish",
     "publish:minor": "npm version minor && npm publish",
