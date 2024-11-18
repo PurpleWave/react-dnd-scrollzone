@@ -39,7 +39,7 @@
   "author": "Alex Neises <alex@neis.es> (nexview.io)",
   "license": "MIT",
   "dependencies": {
-    "hoist-non-react-statics": "^1.2.0",
+    "hoist-non-react-statics": "3.x",
     "lodash.throttle": "^4.0.1",
     "prop-types": "^15.5.9",
     "raf": "^3.2.0",
@@ -67,8 +67,8 @@
     "react-dnd": "^7.0.0"
   },
   "peerDependencies": {
-    "react": "15.1 - 16",
-    "react-dom": "15.1 - 16",
+    "react": "15.1 - 18",
+    "react-dom": "15.1 - 18",
     "react-dnd": "2 - 7"
   },
   "homepage": "https://github.com/purplewave/react-dnd-scrollzone#readme",
