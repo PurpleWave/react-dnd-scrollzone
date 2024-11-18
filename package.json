@@ -1,5 +1,5 @@
 {
-  "name": "@neises/pw-react-dnd-scrollzone",
+  "name": "@PurpleWave/pw-react-dnd-scrollzone",
   "version": "7.0.0",
   "description": "A cross browser solution to scrolling during drag and drop.",
   "main": "lib/index.js",
@@ -20,6 +20,9 @@
     "type": "git",
     "url": "git+https://github.com/purplewave/react-dnd-scrollzone.git"
   },
+  "publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
   "bugs": {
     "url": "http://github.com/purplewave/react-dnd-scrollzone/issues"
   },
