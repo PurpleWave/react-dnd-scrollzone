@@ -1,4 +1,8 @@
 # Changelog
+### `v8.0.0`
+* updated to match fork (adds react 16)
+* added code owners file
+* added PR template
 
 ### `v5.0.0`
 * Added React 16 support
