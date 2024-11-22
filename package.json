@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/purplewave/react-dnd-scrollzone.git"
+    "url": "git+https://github.com/PurpleWave/react-dnd-scrollzone.git"
   },
   "publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
   "bugs": {
-    "url": "http://github.com/purplewave/react-dnd-scrollzone/issues"
+    "url": "http://github.com/PurpleWave/react-dnd-scrollzone/issues"
   },
   "keywords": [
     "react",
@@ -71,7 +71,7 @@
     "react-dom": "15.1 - 18",
     "react-dnd": "2 - 7"
   },
-  "homepage": "https://github.com/purplewave/react-dnd-scrollzone#readme",
+  "homepage": "https://github.com/PurpleWave/react-dnd-scrollzone#readme",
   "directories": {
     "example": "examples",
     "lib": "lib",
