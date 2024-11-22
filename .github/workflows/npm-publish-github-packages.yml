@@ -39,7 +39,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@PurpleWave'
       - run: npm ci
-      - run: npm prepublish
+      - run: npm run prepublish
       - run: npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{secrets.LISTING_TEAM_PAT}}
