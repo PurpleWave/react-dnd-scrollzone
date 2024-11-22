@@ -1,4 +1,7 @@
 # Changelog
+### `v8.0.1`
+* fixed github action not actually building before deploy
+
 ### `v8.0.0`
 * updated to match fork (adds react 16)
 * added code owners file
