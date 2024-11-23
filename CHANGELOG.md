@@ -1,4 +1,7 @@
 # Changelog
+### `v8.0.2`
+* actually build before publish
+
 ### `v8.0.1`
 * fixed github action not actually building before deploy
 
