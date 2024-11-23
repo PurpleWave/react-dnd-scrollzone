@@ -1,6 +1,6 @@
 {
   "name": "@PurpleWave/pw-react-dnd-scrollzone",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "A cross browser solution to scrolling during drag and drop.",
   "main": "lib/index.js",
   "typings": "typings/index.d.ts",
@@ -21,8 +21,8 @@
     "url": "git+https://github.com/PurpleWave/react-dnd-scrollzone.git"
   },
   "publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
+    "registry": "https://npm.pkg.github.com"
+  },
   "bugs": {
     "url": "http://github.com/PurpleWave/react-dnd-scrollzone/issues"
   },
